@@ -305,6 +305,15 @@ public class UVSlice extends JPanel implements MouseListener, MouseMotionListene
 			ConfigPanel._addAfter.setEnabled(true);
 			ConfigPanel._addBefore.setEnabled(true);
 			ConfigPanel._delete.setEnabled(true);
+			int len =ColorSequenceEditor.uvPointList.size();
+			if(len>1){
+				double dx = 1.0d/(len-1);
+				for(int i = 0; i<len; i++){
+					ColorSequenceEditor.uvPointList.get(i).range = dx*i;
+				}
+			}
+			
+			
 
 		} else {
 			ColorSequenceEditor.resetSelection();

@@ -668,6 +668,7 @@ public class ColorSequenceEditor extends JPanel
 						p.r = rgb[0];
 						p.g = rgb[1];
 						p.b = rgb[2];
+						p.range = Double.parseDouble(s[0]);
 
 						if (ColorSequenceEditor.CIElab) {
 							luv = rgbTOlab(rgb);
